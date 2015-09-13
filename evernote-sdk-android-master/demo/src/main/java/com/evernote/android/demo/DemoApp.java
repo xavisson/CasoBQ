@@ -21,8 +21,8 @@ public class DemoApp extends Application {
      * Your Evernote API key. See http://dev.evernote.com/documentation/cloud/
      * Please obfuscate your code to help keep these values secret.
      */
-    private static final String CONSUMER_KEY = "xavisson";
-    private static final String CONSUMER_SECRET = "38ff158b806b3182";
+    private static final String CONSUMER_KEY = "xavisson-2655";
+    private static final String CONSUMER_SECRET = "d2dedcf6167ec77e";
 
     /*
      * Initial development is done on Evernote's testing service, the sandbox.
