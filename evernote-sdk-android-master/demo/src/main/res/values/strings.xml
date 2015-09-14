@@ -29,4 +29,7 @@
     <string name="email">Email</string>
     <string name="search">Search</string>
     <string name="query">Query</string>
+    <string name="title_activity_bq__login">BQ_LoginActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 </resources>

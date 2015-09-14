@@ -10,6 +10,7 @@ import com.evernote.android.demo.activity.MainActivity;
 import com.evernote.client.android.EvernoteOAuthActivity;
 import com.evernote.client.android.EvernoteSession;
 import com.evernote.client.android.login.EvernoteLoginActivity;
+import com.evernote.android.demo.activity.BQ_LoginActivity;
 
 import java.util.Arrays;
 import java.util.List;
@@ -20,7 +21,7 @@ import java.util.List;
 public class LoginChecker implements Application.ActivityLifecycleCallbacks {
 
     private static final List<Class<? extends Activity>> IGNORED_ACTIVITIES = Arrays.asList(
-            LoginActivity.class,
+            BQ_LoginActivity.class,
             EvernoteLoginActivity.class,
             EvernoteOAuthActivity.class
     );
@@ -31,9 +32,12 @@ public class LoginChecker implements Application.ActivityLifecycleCallbacks {
     public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
         if (!EvernoteSession.getInstance().isLoggedIn() && !isIgnored(activity)) {
             mCachedIntent = activity.getIntent();
-            LoginActivity.launch(activity);
+            //BQ_LoginActivity.launch(activity);
+            EvernoteSession.getInstance().authenticate(activity);
 
             activity.finish();
+            activity.startActivity(mCachedIntent);
+
         }
     }
 
@@ -49,7 +53,7 @@ public class LoginChecker implements Application.ActivityLifecycleCallbacks {
 
     @Override
     public void onActivityPaused(Activity activity) {
-        if (activity instanceof LoginActivity && EvernoteSession.getInstance().isLoggedIn()) {
+        if (activity instanceof BQ_LoginActivity && EvernoteSession.getInstance().isLoggedIn()) {
             if (mCachedIntent != null) {
                 activity.startActivity(mCachedIntent);
                 mCachedIntent = null;
