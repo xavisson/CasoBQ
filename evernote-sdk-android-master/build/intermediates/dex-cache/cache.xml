@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\exploded-aar\com.evernote\android-intent\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a790b7afa1cc412d71a31180b1d8113497334a20">
+        <dex dex="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\pre-dexed\debug\classes-4dac844e5d1cc776c4e83f2c9e1809ebd7bb2ca8.jar" />
+    </item>
+    <item
+        jar="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-be0eaf2d41d36e1e6a1d27a5b6983e3a6d507425.jar" />
+    </item>
+    <item
+        jar="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\exploded-aar\evernote-sdk-android-master\library\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="0cff8aaf73c20405d545cac6d5eb1f00de5763f4">
+        <dex dex="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\pre-dexed\debug\classes-48333193d4675a23e0d387a873b30ecd8c6e63e6.jar" />
+    </item>
+    <item
+        jar="C:\Users\NexStreaming Madrid\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.4.0\5b72bf48563ea8410e650de14aa33ff69a3e8c35\okio-1.4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
+        <dex dex="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\pre-dexed\debug\okio-1.4.0-910dda3a3f00b1d3469cfb2dd999676474886813.jar" />
+    </item>
+    <item
+        jar="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
+        <dex dex="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\pre-dexed\debug\classes-36091be639f9ef05ec735da33c94e8c9defedd14.jar" />
+    </item>
+    <item
+        jar="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\pre-dexed\debug\classes-254cab48f7c3e7d99662ca49b2cbc0db2fa8364f.jar" />
+    </item>
+    <item
+        jar="C:\Users\NexStreaming Madrid\.gradle\caches\modules-2\files-2.1\com.evernote\evernote-api\1.25.1\760d97a6ea6d782317dfa71b2a408cdb20b423a7\evernote-api-1.25.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="760d97a6ea6d782317dfa71b2a408cdb20b423a7">
+        <dex dex="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\pre-dexed\debug\evernote-api-1.25.1-f50714e23e5ce4d490bc960b62e6dd7f9bdd781e.jar" />
+    </item>
+    <item
+        jar="C:\Users\NexStreaming Madrid\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-b08399403f858c3be0af48745b1d55ce6be2e1d8.jar" />
+    </item>
+    <item
+        jar="C:\Users\NexStreaming Madrid\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.4.0\40340c0748190fe897baf7bffbc1b282734294e5\okhttp-2.4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
+        <dex dex="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\pre-dexed\debug\okhttp-2.4.0-fb263c9bbdc3b4250e0566d595f54e6aef5b39da.jar" />
+    </item>
+    <item
+        jar="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\pre-dexed\debug\classes-252a9d8a9abb1578f77e026577d709f2f2bfa046.jar" />
+    </item>
+    <item
+        jar="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\pre-dexed\debug\classes-052046eebdf396c07159c4b8f9598219ba65ba83.jar" />
+    </item>
+    <item
+        jar="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\exploded-aar\net.vrallev.android\android-task\1.0.7\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="aba599e475a0bb6c7f05cd472623e9603674b16f">
+        <dex dex="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\pre-dexed\debug\classes-7e029defcae977cebb2da8d17a6384f5d905918d.jar" />
+    </item>
+    <item
+        jar="C:\Users\NexStreaming Madrid\.gradle\caches\modules-2\files-2.1\org.scribe\scribe\1.3.7\583921bed46635d9f529ef5f14f7c9e83367bc6e\scribe-1.3.7.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="583921bed46635d9f529ef5f14f7c9e83367bc6e">
+        <dex dex="C:\Users\NexStreaming Madrid\Development\Javi\CasoBQ\evernote-sdk-android-master\demo\build\intermediates\pre-dexed\debug\scribe-1.3.7-65a928432afd293a0f146f90e911eeb668c4036e.jar" />
+    </item>
+
+</items>

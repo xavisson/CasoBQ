@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/NexStreaming%20Madrid/Development/Javi/CasoBQ/evernote-sdk-android-master/library/src/main/res/values/esdk__strings.xml -->
+    <eat-comment/>
+    <string name="esdk_loading">Loading…</string>
+    <string name="esdk_switch_to">Switch to %s</string>
+</resources>

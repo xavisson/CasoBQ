@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/NexStreaming%20Madrid/Development/Javi/CasoBQ/evernote-sdk-android-master/demo/src/main/res/values-v19/dimens.xml -->
+    <eat-comment/>
+    <dimen name="status_bar_padding">24dp</dimen>
+    <!-- From: file:/C:/Users/NexStreaming%20Madrid/Development/Javi/CasoBQ/evernote-sdk-android-master/demo/src/main/res/values-v19/themes.xml -->
+    <eat-comment/>
+    <style name="Theme.Demo.Translucent" parent="Theme.Demo">
+        <item name="toolbarStyle">@style/ToolbarStyle.Trans</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+    <!-- From: file:/C:/Users/NexStreaming%20Madrid/Development/Javi/CasoBQ/evernote-sdk-android-master/demo/src/main/res/values-v19/styles.xml -->
+    <eat-comment/>
+    <style name="ToolbarStyle.Trans">
+        <item name="android:paddingTop">@dimen/status_bar_padding</item>
+    </style>
+</resources>
