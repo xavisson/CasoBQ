@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -157,4 +158,13 @@ public class NoteContainerFragment extends AbstractContainerFragment {
         mQuery = query;
         refresh();
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        //Refreshing the view once the user is logged
+        refresh();
+
+    }
+
 }

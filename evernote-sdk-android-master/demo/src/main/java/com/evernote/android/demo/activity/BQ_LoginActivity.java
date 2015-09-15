@@ -115,7 +115,7 @@ public class BQ_LoginActivity extends AppCompatActivity implements EvernoteLogin
     @Override
     public void onLoginFinished(boolean successful) {
         if (successful) {
-            finish();
+            //finish();
         } else {
 //            mButton.setEnabled(true);
         }

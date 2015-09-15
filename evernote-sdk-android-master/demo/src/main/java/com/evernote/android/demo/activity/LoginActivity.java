@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity implements EvernoteLoginFra
     @Override
     public void onLoginFinished(boolean successful) {
         if (successful) {
-            finish();
+            //finish();
         } else {
             mButton.setEnabled(true);
         }

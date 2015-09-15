@@ -20,7 +20,7 @@ import java.util.List;
  */
 public class LoginChecker implements Application.ActivityLifecycleCallbacks {
 
-    private static final List<Class<? extends Activity>> IGNORED_ACTIVITIES = Arrays.asList(
+    private static List<Class<? extends Activity>> IGNORED_ACTIVITIES = Arrays.asList(
             BQ_LoginActivity.class,
             EvernoteLoginActivity.class,
             EvernoteOAuthActivity.class
@@ -32,11 +32,9 @@ public class LoginChecker implements Application.ActivityLifecycleCallbacks {
     public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
         if (!EvernoteSession.getInstance().isLoggedIn() && !isIgnored(activity)) {
             mCachedIntent = activity.getIntent();
-            //BQ_LoginActivity.launch(activity);
+            //Login automatically
             EvernoteSession.getInstance().authenticate(activity);
 
-            activity.finish();
-            activity.startActivity(mCachedIntent);
 
         }
     }
@@ -53,14 +51,14 @@ public class LoginChecker implements Application.ActivityLifecycleCallbacks {
 
     @Override
     public void onActivityPaused(Activity activity) {
-        if (activity instanceof BQ_LoginActivity && EvernoteSession.getInstance().isLoggedIn()) {
+   /*     if (activity instanceof BQ_LoginActivity && EvernoteSession.getInstance().isLoggedIn()) {
             if (mCachedIntent != null) {
                 activity.startActivity(mCachedIntent);
                 mCachedIntent = null;
             } else {
                 activity.startActivity(new Intent(activity, MainActivity.class));
             }
-        }
+        }*/
     }
 
     @Override
