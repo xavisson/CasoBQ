@@ -14,6 +14,9 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -41,6 +44,8 @@ public class CreateNoteDialogFragment extends DialogFragment {
 
     private CreateNewNoteTask.ImageData mImageData;
 
+    private TextInputLayout titleView;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,16 +60,21 @@ public class CreateNoteDialogFragment extends DialogFragment {
 
         @SuppressLint("InflateParams")
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_create_note, null);
-        final TextInputLayout titleView = (TextInputLayout) view.findViewById(R.id.textInputLayout_title);
+        titleView = (TextInputLayout) view.findViewById(R.id.textInputLayout_title);
         final TextInputLayout contentView = (TextInputLayout) view.findViewById(R.id.textInputLayout_content);
 
         DialogInterface.OnClickListener onClickListener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+
                 switch (which) {
                     case DialogInterface.BUTTON_POSITIVE:
-                        if (getParentFragment() instanceof NoteContainerFragment) {
-                            ((NoteContainerFragment) getParentFragment()).createNewNote(titleView.getEditText().getText().toString(),
+                        if (getParentFragment() instanceof CreateNoteOptions) {
+                            //((NoteContainerFragment) getParentFragment()).createNewNote(titleView.getEditText().getText().toString(),
+                            //        contentView.getEditText().getText().toString(), mImageData);
+                            String titleText = titleView.getEditText().getText().toString();
+                            if (titleText.isEmpty()) return;
+                            ((CreateNoteOptions) getParentFragment()).createNewNote(titleText,
                                     contentView.getEditText().getText().toString(), mImageData);
                         } else {
                             throw new IllegalStateException();
@@ -95,6 +105,34 @@ public class CreateNoteDialogFragment extends DialogFragment {
                 public void onClick(View v) {
                     Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
                     getActivity().startActivityForResult(intent, REQ_SELECT_IMAGE);
+                }
+            });
+            // deshabilitamos el botón de crear nota porque falla si no tiene título
+           final Button buttonCreate = alertDialog.getButton(Dialog.BUTTON_POSITIVE);
+            buttonCreate.setEnabled(false);
+
+            /*titleView.getEditText().setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
+                    String titleText = titleView.getEditText().getText().toString();
+                    buttonCreate.setEnabled(!titleText.isEmpty());
+                }
+            });*/
+            titleView.getEditText().addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    //  comprobamos que el título no está vacío para activar el botón
+                    buttonCreate.setEnabled(!s.toString().isEmpty());
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
                 }
             });
         }

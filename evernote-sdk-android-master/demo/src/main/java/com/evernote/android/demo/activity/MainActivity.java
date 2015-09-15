@@ -46,10 +46,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (!EvernoteSession.getInstance().isLoggedIn()) {
-            // LoginChecker will call finish
-            //return;
-        }
 
         setContentView(R.layout.activity_main);
 
@@ -121,16 +117,51 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    /*
+    *   Adding two menu items that allow to sort the list of notes by title and by date
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.action_sortbytitle:
+                sortNotesByTitle();
+                return true;
+            case R.id.action_sortbydate:
+                sortNotesByDate();
+                return true;
             case R.id.action_logout:
                 Util.logout(this);
                 return true;
-
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void sortNotesByTitle() {
+
+    //Crear un metodo en NoteContainerFragment con una llamada a FindNotesTask con el filtro adecuado
+
+
+
+    //Crear otro NoteContainerFragment para nuestro tipo de ordenacion
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, NoteContainerFragment.create(NoteContainerFragment.TITLE))
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                .commit();
+
+    //Coger directamente la lista y ordenarla nosotros (Lo cual no es posible, por que no tenemos control de la vista/fragment)
+
+
+
+    }
+
+    private void sortNotesByDate(){
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, NoteContainerFragment.create(NoteContainerFragment.CREATION))
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                .commit();
+
     }
 
     @Override

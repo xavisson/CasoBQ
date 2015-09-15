@@ -35,10 +35,26 @@ public class NoteContainerFragment extends AbstractContainerFragment {
 
     private static final int MAX_NOTES = 20;
 
+    //These constants allow to modify the order when requesting the list of notes
+    public static final int CREATION = -1;
+    public static final int TITLE = -2;
+    public static final int MODIFICATION = -3;
+
+    private static int myOrder;
+
     private static final String KEY_NOTEBOOK = "KEY_NOTEBOOK";
     private static final String KEY_LINKED_NOTEBOOK = "KEY_LINKED_NOTEBOOK";
 
+    public static NoteContainerFragment create(int order) {
+        //New parameter added to this class in order to support the new types of order
+        myOrder = order;
+        return create(null, null);
+    }
+
     public static NoteContainerFragment create() {
+        //New parameter added to this class in order to support the new types of order
+        myOrder = MODIFICATION;
+
         return create(null, null);
     }
 
@@ -141,13 +157,18 @@ public class NoteContainerFragment extends AbstractContainerFragment {
 
     @Override
     protected void loadData() {
-        new FindNotesTask(0, MAX_NOTES, mNotebook, mLinkedNotebook, mQuery).start(this);
+        new FindNotesTask(0, MAX_NOTES, mNotebook, mLinkedNotebook, mQuery, myOrder).start(this);
         mQuery = null;
     }
 
     @Override
     public void onFabClick() {
-        new CreateNoteDialogFragment().show(getChildFragmentManager(), CreateNoteDialogFragment.TAG);
+
+        new CreateNoteOptions().show(getChildFragmentManager(), CreateNoteDialogFragment.TAG);
+
+
+        //Previous functionality
+        //new CreateNoteDialogFragment().show(getChildFragmentManager(), CreateNoteDialogFragment.TAG);
     }
 
     public void createNewNote(String title, String content, CreateNewNoteTask.ImageData imageData) {

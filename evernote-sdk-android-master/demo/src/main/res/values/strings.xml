@@ -32,4 +32,11 @@
     <string name="title_activity_bq__login">BQ_LoginActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="sort_by_title">Sort by title</string>
+    <string name="sort_by_date">Sort by date</string>
+    <string name="using_keyboard">Create using keyboard</string>
+    <string name="using_ocr">Create using OCR</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -3,6 +3,7 @@ package com.evernote.android.demo.task;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
+import com.evernote.android.demo.fragment.note.NoteContainerFragment;
 import com.evernote.client.android.EvernoteSession;
 import com.evernote.client.android.asyncclient.EvernoteSearchHelper;
 import com.evernote.client.android.type.NoteRef;
@@ -21,11 +22,32 @@ public class FindNotesTask extends BaseTask<List<NoteRef>> {
     private final EvernoteSearchHelper.Search mSearch;
 
     @SuppressWarnings("unchecked")
-    public FindNotesTask(int offset, int maxNotes, @Nullable Notebook notebook, @Nullable LinkedNotebook linkedNotebook, @Nullable String query) {
+    public FindNotesTask(int offset, int maxNotes, @Nullable Notebook notebook, @Nullable LinkedNotebook linkedNotebook, @Nullable String query, int order) {
         super((Class) List.class);
 
         NoteFilter noteFilter = new NoteFilter();
-        noteFilter.setOrder(NoteSortOrder.UPDATED.getValue());
+
+        switch (order) {
+            case NoteContainerFragment.CREATION :
+                noteFilter.setOrder(NoteSortOrder.CREATED.getValue());
+
+                break;
+            case NoteContainerFragment.MODIFICATION:
+
+                noteFilter.setOrder(NoteSortOrder.UPDATED.getValue());
+
+                break;
+            case NoteContainerFragment.TITLE:
+
+                noteFilter.setOrder(NoteSortOrder.TITLE.getValue());
+
+                break;
+            default :
+                noteFilter.setOrder(NoteSortOrder.UPDATED.getValue());
+
+                break;
+        }
+
 
         if (!TextUtils.isEmpty(query)) {
             noteFilter.setWords(query);
