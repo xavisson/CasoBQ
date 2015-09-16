@@ -108,7 +108,7 @@ public class CreateNoteDialogFragment extends DialogFragment {
                 }
             });
 
-            // Possitive button is disabled because the app crashes if the note has no title
+            // Positive button is disabled because the app crashes if the note has no title
            final Button buttonCreate = alertDialog.getButton(Dialog.BUTTON_POSITIVE);
             buttonCreate.setEnabled(false);
 
@@ -127,7 +127,7 @@ public class CreateNoteDialogFragment extends DialogFragment {
 
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    //The possitive button is enabled only when there is title
+                    //The positive button is enabled only when there is title
                     buttonCreate.setEnabled(!s.toString().isEmpty());
                 }
 
