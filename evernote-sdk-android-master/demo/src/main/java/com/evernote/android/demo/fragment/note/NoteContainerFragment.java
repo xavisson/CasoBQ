@@ -164,6 +164,8 @@ public class NoteContainerFragment extends AbstractContainerFragment {
     @Override
     public void onFabClick() {
 
+        //New functionality: clicking on the button shows a dialog with two options for creating
+        // notes
         new CreateNoteOptions().show(getChildFragmentManager(), CreateNoteDialogFragment.TAG);
 
 

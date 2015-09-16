@@ -27,7 +27,10 @@ import net.vrallev.android.task.TaskExecutor;
 import net.vrallev.android.task.TaskResult;
 
 /**
- * @author rwondratschek
+ * @author xavisson
+ * This class contains a dialog that let the user choose between two options:
+ * - create notes using keyboard
+ * - create notes using ocr
  */
 public class CreateNoteOptions extends DialogFragment {
 

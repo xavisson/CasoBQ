@@ -139,24 +139,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void sortNotesByTitle() {
 
-    //Crear un metodo en NoteContainerFragment con una llamada a FindNotesTask con el filtro adecuado
-
-
-
-    //Crear otro NoteContainerFragment para nuestro tipo de ordenacion
+    //Crear otro NoteContainerFragment para nuestro tipo de ordenacion: en este caso, por TITLE
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, NoteContainerFragment.create(NoteContainerFragment.TITLE))
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                 .commit();
 
-    //Coger directamente la lista y ordenarla nosotros (Lo cual no es posible, por que no tenemos control de la vista/fragment)
-
-
-
     }
 
     private void sortNotesByDate(){
+
+        //Crear otro NoteContainerFragment para nuestro tipo de ordenacion: en este caso, por CREATION
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, NoteContainerFragment.create(NoteContainerFragment.CREATION))
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)

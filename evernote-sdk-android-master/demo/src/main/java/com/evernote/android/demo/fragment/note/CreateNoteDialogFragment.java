@@ -107,7 +107,8 @@ public class CreateNoteDialogFragment extends DialogFragment {
                     getActivity().startActivityForResult(intent, REQ_SELECT_IMAGE);
                 }
             });
-            // deshabilitamos el botón de crear nota porque falla si no tiene título
+
+            // Possitive button is disabled because the app crashes if the note has no title
            final Button buttonCreate = alertDialog.getButton(Dialog.BUTTON_POSITIVE);
             buttonCreate.setEnabled(false);
 
@@ -126,7 +127,7 @@ public class CreateNoteDialogFragment extends DialogFragment {
 
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    //  comprobamos que el título no está vacío para activar el botón
+                    //The possitive button is enabled only when there is title
                     buttonCreate.setEnabled(!s.toString().isEmpty());
                 }
 
