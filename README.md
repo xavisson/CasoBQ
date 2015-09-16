@@ -26,7 +26,7 @@ parámetros solicitados.
 
 Requisito 4. Al hacer tap sobre una nota, se accederá al contenido de la misma. (No es necesario que las notas sean editables)
 
->> El fragment
+>> El fragment NoteContainerFragment muestra la lista de notas, y al clicar sobre estas se accede al contenido de la nota.
 
 Requisito 5. Existirá un botón para “añadir nota” que permitirá crear una nota (con título y cuerpo) y posteriormente 
 guardarla.
